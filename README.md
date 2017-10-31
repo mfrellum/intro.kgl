@@ -8,11 +8,11 @@
    * pip install kaggle-cli
 1. Install XGBoost
    * [Windows](http://www.picnet.com.au/blogs/guido/post/2016/09/22/xgboost-windows-x64-binaries-for-download/)
-   * [Linux/OSX](https://xgboost.readthedocs.io/en/latest/build.html)
+   * [Linux/OSX](https://deaxgboost.readthedocs.io/en/latest/build.html)
       1. Install lib
          ```
          RUN git clone --recursive https://github.com/dmlc/xgboost && \
-         cd xgboost && \
+         cd xgboost && cp make/minimum.mk ./config.mk; && \
          make -j4 
          ```
       1. Install python wrapper package
