@@ -1,0 +1,12 @@
+version: '3'
+services:
+  kagglepy:
+#    build: ./dockerbuild
+    image: kaggle/python
+#https://github.com/Kaggle/docker-python/blob/master/Dockerfile
+    ports:
+      - "8888:8888"
+    volumes:
+      - /tmp/working
+    working_dir: /tmp/working
+    command: jupyter notebook --no-browser --ip="0.0.0.0"  --allow-root
